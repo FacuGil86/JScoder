@@ -4,23 +4,17 @@ alert("Calcula tus cuotas")
     let cuotas = parseInt(prompt("cantidad de cuotas: podes elegir entre 1,3,6,12 ")) 
 
 function calcularCuotas() {
-    
-       
-    if (cuotas == 1) {
-        importeCuotas();
-
-    }
-    else if (cuotas == 3) {
-        importeCuotas();
-    }
-    else if (cuotas == 6) {
-        importeCuotas();
-    }
-    else if (cuotas == 12) {
-        importeCuotas();
-    } else  {
-        alert("podes elegir  1,3,6 y 12 cuotas")
-    }
+    while (i = cuotas) { 
+    if (i !== 1 && i !== 3 && i !== 6 && i !== 12) {
+        alert("Las opciones de cuotas son: 1,3,6 o 12")
+        cuotas = parseInt(prompt("cantidad de cuotas"))
+    } else {
+        importeCuotas()
+        break
+    } 
+        
+    } 
+        
 }
 
 function importeCuotas() {
